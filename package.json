@@ -1,0 +1,11 @@
+{
+  "name": "wevideo",
+  "version": "1.0.0",
+  "description": "Video related website using nodeJS",
+  "main": "index.js",
+  "author": "JK Kim",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
