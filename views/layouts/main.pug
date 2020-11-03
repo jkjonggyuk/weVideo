@@ -1,10 +1,15 @@
 doctype html
 html
     head
+        //- https://stackoverflow.com/questions/40360109/content-security-policy-img-src-self-data
+        meta(http-equiv="Content-Security-Policy", content="default-src *; style-src 'self' http://* 'unsafe-inline'; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'")
+        meta(img-src 'self' data:image/svg+xml)
         link(rel="stylesheet", href="https://use.fontawesome.com/releases/v5.15.1/css/all.css", integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp", crossorigin="anonymous")
         title #{pageTitle} | #{siteName}
+        link(rel="stylesheet", href="/static/styles.css")
     body
         include ../partials/header
         main
             block content
         include ../partials/footer
+        script(src="/static/main.js")
